@@ -10,6 +10,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import scipy.stats as stat
 from scipy.stats import norm
+from scipy.stats import expon
 
 
 benign = np.genfromtxt("PA_5_2_Benigndata.csv", delimiter = ",")
@@ -54,7 +55,6 @@ plt.plot(xpoints, benign_pdf, "r", linewidth = 2)
 # Plot normalized histogram <malignant>
 plt.hist(malignant, bins = "auto", density = True)
 xmin, xmax = plt.xlim()
-xpoints = np.linspace(xmin, xmax, 200)
 
 # PDF for Gaussian with mean and standard deviation
 malignant_pdf = norm.pdf(xpoints, malignant_mean, math.sqrt(malignant_var))
@@ -64,3 +64,9 @@ plt.plot(xpoints, malignant_pdf, "r", linewidth = 2)
 
 
 # ===== Part (d) =====
+# Calculate mean
+benign_p = expon.pdf(xpoints, scale = benign_mean)
+malignant_p = expon.pdf(xpoints, scale = malignant_mean)
+
+
+# ===== Part (e) =====

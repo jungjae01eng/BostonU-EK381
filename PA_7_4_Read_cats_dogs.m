@@ -1,3 +1,8 @@
+% Jungjae Lee
+% Boston University College of Engineering
+% EK 381 Programming Assignment 3 (HW 7)
+
+
 %This function reads in all images in catsfolder/ and dogsfolder/. 
 %Each 64 x 64 image is reshaped into a length-4096 row vector. 
 %These row vectors are stacked on top of one another to get two data

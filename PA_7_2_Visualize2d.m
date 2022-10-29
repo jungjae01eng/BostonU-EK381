@@ -1,3 +1,8 @@
+% Jungjae Lee
+% Boston University College of Engineering
+% EK 381 Programming Assignment 3 (HW 7)
+
+
 %This function takes in two datasets (which must have the same number of
 %columns), and reduces them down to a two-dimensional representation via
 %Principal Component Analysis. It outputs the reduced datasets and

@@ -1,3 +1,8 @@
+% Jungjae Lee
+% Boston University College of Engineering
+% EK 381 Programming Assignment 3 (HW 7)
+
+
 %This function takes in an n x d data matrix X and an index i. It
 %assumes that d is a square number. It extracts 
 %the ith row of X and displays it as a grayscale sqrt(d) x sqrt(d) image.

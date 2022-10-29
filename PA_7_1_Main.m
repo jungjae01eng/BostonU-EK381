@@ -1,3 +1,8 @@
+% Jungjae Lee
+% Boston University College of Engineering
+% EK 381 Programming Assignment 3 (HW 7)
+
+
 % Read Data from csv
 benignData = readmatrix("benignfull.csv");
 malignantData = readmatrix("malignantfull.csv");

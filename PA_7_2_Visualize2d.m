@@ -7,32 +7,37 @@
 %columns), and reduces them down to a two-dimensional representation via
 %Principal Component Analysis. It outputs the reduced datasets and
 %generates a two-dimensional scatter plot.
-function [dataset0_2d dataset1_2d] = visualize2d(dataset0,dataset1)
+function [dataset0_2d, dataset1_2d] = PA_7_2_Visualize2d(dataset0, dataset1)
 
+% Stack dataset0 and dataset2 into a single data matrix X
 X = [dataset0; dataset1];
 muX = mean(X);
 sigmaX = cov(X);
-%Your code starts here.
+
+% Compute the eignvenctors and eigenvalues
 [V D] = eig(sigmaX);
+
+% Determine the i and j for the largest and second largest eigenvalues
 temp = sort(D);
 
-i = temp(end);
-j = temp(end-1);
+i = temp(end);      % Largest eigenvalue
+j = temp(end-1);    % second largest eigenvalue
 
-disp(temp);
-
-temp1 = find(D==i);
+% Find vi and vj corresponding to the largest and second largest eignvalues
+temp1 = find(D==i);     % "find" returns a vector containing the linear indices in array
 temp2 = find(D==j);
-
-disp(temp1);
-disp(temp2);
 
 vi = V(temp1);
 vj = V(temp2);
 
+% Display all of the variables
+disp(temp);
+disp(temp1);
+disp(temp2);
 disp(vi);
 disp(vj);
 
+% Create two-demensional representations
 for k = 1:length(X(:,1))
     Z(k,:) = (X(k,1:2)-muX).*[vi vj];      % (X - meanX) * [vi vj] equation given in worksheet
 end

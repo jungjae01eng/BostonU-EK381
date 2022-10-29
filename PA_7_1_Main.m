@@ -22,9 +22,7 @@ ylabel('y: perimeter');
 title('texture vs perimeter');
 legend('benign data', 'malignant data');
 
-
-% [benign_2d malignant_2d] = visualize2d(benignData(:,1:2), malignantData(:,1:2));
-
+[benign_2d, malignant_2d] = PA_7_2_Visualize2d(benignData(:,1:2), malignantData(:,1:2));
 
 ones = readmatrix("MNISTones.csv");
 zeros = readmatrix("MNISTZEROS.csv");
